@@ -1,3 +1,4 @@
+var loadScreen       = document.querySelector(".load-screen");
 var sections         = document.querySelectorAll('.section');
 var sectionContainer = document.querySelector('.sections');
 
@@ -35,6 +36,10 @@ document.addEventListener('touchend', (event) => {
 });
 
 document.body.onload = ()=>{
+    loadScreen.style.opacity = "0";
+    setTimeout(()=>{
+        loadScreen.style.display = "none";
+    },300);
     addClass("h1", "reveal", sections[currentSection]);
     animations[currentSection].forEach(s => addClass(s,"reveal"));
 }
