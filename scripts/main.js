@@ -4,7 +4,7 @@ var sectionContainer = document.querySelector('.sections');
 
 // Apply reveal class on these to play entry animations
 var animations = {
-    0 : [],
+    0 : [".light-bg", ".ball-1", ".ball-2", ".ball-3", ".ball-4"],
     1 : ["#notebook", "#Everything"],
     2 : [],
     3 : [],
@@ -19,21 +19,21 @@ var scrollDir = 0;
 var animationTime = 800;
 
 // Touch data (for mobile)
-let touchStart = 0;
-let touchEnd = 0;
+// let touchStart = 0;
+// let touchEnd = 0;
 
-document.addEventListener('touchstart', (event) => {
-  touchStart = event.changedTouches[0].clientY;
-});
+// document.addEventListener('touchstart', (event) => {
+//   touchStart = event.changedTouches[0].clientY;
+// });
 
-document.addEventListener('touchend', (event) => {
-  touchEnd = event.changedTouches[0].clientY;
-  if (touchStart > touchEnd) {
-    performScroll(1);
-  } else {
-    performScroll(-1);
-  }
-});
+// document.addEventListener('touchend', (event) => {
+//   touchEnd = event.changedTouches[0].clientY;
+//   if (touchStart > touchEnd) {
+//     performScroll(1);
+//   } else {
+//     performScroll(-1);
+//   }
+// });
 
 document.body.onload = ()=>{
     loadScreen.style.opacity = "0";
