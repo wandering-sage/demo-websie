@@ -5,8 +5,8 @@ var sectionContainer = document.querySelector('.sections');
 // Apply reveal class on these to play entry animations
 var animations = {
     0 : [".light-bg", ".ball-1", ".ball-2", ".ball-3", ".ball-4"],
-    1 : ["#notebook", "#Everything"],
-    2 : [],
+    1 : [".circle-1", ".circle-2", ".circle-3", ".rect-1", ".rect-2", ".triangle", ".shapes-bg", ".man", ".woman"],
+    2 : ["#notebook", "#Everything"],
     3 : [],
 }
 

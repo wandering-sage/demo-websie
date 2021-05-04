@@ -100,7 +100,7 @@ img[class^="ball-"]{
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
-	transition: 0.3s ease-out 0.9s;
+	transition: 0.3s ease-out 0.6s;
 	animation: hovering 1.6s ease-in-out infinite alternate;
 }
 img[class^="ball-"].reveal{
@@ -144,19 +144,115 @@ img.light-bg{
 	transition: 0.3s ease-in;
 }
 img.light-bg.reveal{
-	animation: flicker 0.3s ease-out forwards 0.6s;
+	animation: flicker 0.4s ease forwards 0.2s;
 }
 
-/* ------------------------------------------------------------------------------------------- */
-
+/* -----------------------------------------Next Section-------------------------------------------------- */
+.section img{
+	opacity: 0;
+	transition: 0.3s ease-in 0s;
+}
+.section img.reveal{
+	opacity: 1;
+	transition: 0.3s ease-out 0.3s;
+}
 img.stars{
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
 	left: 0;
+	opacity: 1;
+}
+img.shapes-bg{
+	width: 85vw;
+	height: 98vh;
+	position: absolute;
+	transform: translateY(2%);
+	left: 6.85vw;
+	/* top: 4.3vh; */
+}
+img.circle-2{
+	width: 50px;
+	position: absolute;
+	left: 6.85vw;
+	top: 110vh;
+	transform: translateY(-40px);
+	animation-delay: -0.3s !important;
+}
+img.circle-3{
+	width: 36px;
+	position: absolute;
+	right: 190px;
+	top: 107.7vh;
+	animation-delay: -0.3s !important;
+}
+img.circle-1{
+	width: 15.6vw;
+	position: absolute;
+	left: 13vw;
+	top: 128vh;
+	transform: translateX(-40px);
+}
+img.triangle{
+	width: 15.6vw;
+	position: absolute;
+	left: 33.7vw;
+	bottom: 100vh;
+	transform: translateY(40px);
+	animation-delay: -0.3s !important;
+}
+img.rect-1{
+	transform: translateY(-40px);
+	width: 293px;
+	position: absolute;
+	right: 322px;
+	top: 107.7vh;
+}
+img.rect-2{
+	transform: translateX(40px);
+	width: 224px;
+	position: absolute;
+	right: 114px;
+	bottom: 107vh;
+}
+img.man{
+	position: absolute;
+	height: 60vh;
+	top: 160vh;
+	right: 7vw;
+}
+img.woman{
+	position: absolute;
+	top: 160vh;
+	height: 60vh;
+	left: 7vw;
 }
 
-/* -----------------------------------------SVG-------------------------------------------- */
+img.man.reveal{
+	transition: 0.4s ease-out;
+	transition-delay: 0.6s;
+	top: 150vh;
+	right: 10vw;
+	animation: man 1.6s ease-in-out infinite alternate 0.9s;
+}
+img.woman.reveal{
+	transition: 0.4s ease-out;
+	transition-delay: 0.6s;
+	top: 150vh;
+	left: 10vw;
+	animation: woman 1.6s ease-in-out infinite alternate 0.9s;
+}
+
+img.grad.reveal{
+	transition: 0.4s ease-out;
+	transition-delay: 0.6s;
+	transform: translate(0, -8px);
+	animation: hovering 1.6s ease-in-out infinite alternate 1s;
+}
+
+
+
+/* -----------------------------------------Last Section-------------------------------------------- */
 
 .hide {
 	opacity: 0 !important;
@@ -240,16 +336,40 @@ img.stars{
 }
 
 @keyframes flicker{
-	25%{
-		opacity: 1;
-	}
-	50%{
+	10%{
 		opacity: 0.5;
 	}
-	75%{
-		opacity: 0;
+	48%{
+		opacity: 0.5;
+	}
+	50%{
+		opacity: 0.1;
+	}
+	90%{
+		opacity: 0.2;
+	}
+	95%{
+		opacity: 0.5;
 	}
 	100%{
 		opacity: 1;
+	}
+}
+
+@keyframes woman {
+	from {
+		transform: translate(5px, -8.66px);
+	}
+	to {
+		transform: translate(-5px, 8.66px);
+	}
+}
+
+@keyframes man {
+	from {
+		transform: translate(-5px, -8.66px);
+	}
+	to {
+		transform: translate(5px, 8.66px);
 	}
 }
