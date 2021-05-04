@@ -148,11 +148,11 @@ img.light-bg.reveal{
 }
 
 /* -----------------------------------------Next Section-------------------------------------------------- */
-.section img{
+.mid img{
 	opacity: 0;
 	transition: 0.3s ease-in 0s;
 }
-.section img.reveal{
+.mid img.reveal{
 	opacity: 1;
 	transition: 0.3s ease-out 0.3s;
 }
@@ -177,14 +177,14 @@ img.circle-2{
 	left: 6.85vw;
 	top: 110vh;
 	transform: translateY(-40px);
-	animation-delay: -0.3s !important;
+	animation-delay: 1.3s !important;
 }
 img.circle-3{
 	width: 36px;
 	position: absolute;
 	right: 190px;
 	top: 107.7vh;
-	animation-delay: -0.3s !important;
+	animation-delay: 1.3s !important;
 }
 img.circle-1{
 	width: 15.6vw;
@@ -192,6 +192,8 @@ img.circle-1{
 	left: 13vw;
 	top: 128vh;
 	transform: translateX(-40px);
+	animation-delay: 1.15s !important;
+
 }
 img.triangle{
 	width: 15.6vw;
@@ -199,7 +201,7 @@ img.triangle{
 	left: 33.7vw;
 	bottom: 100vh;
 	transform: translateY(40px);
-	animation-delay: -0.3s !important;
+	animation-delay: 1.3s !important;
 }
 img.rect-1{
 	transform: translateY(-40px);
@@ -214,6 +216,7 @@ img.rect-2{
 	position: absolute;
 	right: 114px;
 	bottom: 107vh;
+	animation-delay: 1.15s !important;
 }
 img.man{
 	position: absolute;
